@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Music Library</title>
+    <title>음악 플레이리스트</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
-        }
-
-        nav {
-            background-color: #007BFF;
-            padding: 10px;
-            text-align: center;
         }
 
         nav a {
@@ -104,19 +98,12 @@
 </head>
 <body>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">NoStyle</a>
-        <a href="#">Example</a>
-        <a href="#">About</a>
-    </nav>
-
     <div class="container">
-        <h1>My Music Library</h1>
+        <h1>음악 플레이리스트</h1>
 
         <div class="search-bar">
             <select>
-                <option value="">Select Genre</option>
+                <option value="">장르</option>
                 <option value="댄스">댄스</option>
                 <option value="발라드">발라드</option>
                 <option value="힙합">힙합</option>
@@ -124,7 +111,7 @@
                 <option value="포크">포크</option>
                 <option value="팝송">팝송</option>
             </select>
-            <input type="text" placeholder="Search song">
+            <input type="text" placeholder="검색">
             <!-- "추가" 버튼을 눌렀을 때 add.html로 이동 -->
             <button onclick="window.location.href='add.html'">추가</button>
         </div>
@@ -133,12 +120,12 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Song Title</th>
-                    <th>Artist</th>
-                    <th>Album</th>
-                    <th>Genre</th>
-                    <th>Play time</th>
-                    <th>Menu</th>
+                    <th>제목</th>
+                    <th>가수</th>
+                    <th>앨범</th>
+                    <th>장르</th>
+                    <th>재생시간</th>
+                    <th>메뉴</th>
                 </tr>
             </thead>
             <tbody>
@@ -186,8 +173,8 @@
                     <td>락</td>
                     <td>4 : 43</td>
                     <td class="menu-icons">
-                        <i class="edit-icon" onclick="window.location.href='edit.html'">✏️</i>
-                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">🗑️</i>
+                        <i class="edit-icon" onclick="window.location.href='edit.html'">수정</i>
+                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">삭제</i>
                     </td>
                 </tr>
                 <tr>
@@ -198,8 +185,8 @@
                     <td>발라드</td>
                     <td>3 : 53</td>
                     <td class="menu-icons">
-                        <i class="edit-icon" onclick="window.location.href='edit.html'">✏️</i>
-                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">🗑️</i>
+                        <i class="edit-icon" onclick="window.location.href='edit.html'">수정</i>
+                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">삭제</i>
                     </td>
                 </tr>
                 <tr>
@@ -210,8 +197,8 @@
                     <td>발라드</td>
                     <td>4 : 08</td>
                     <td class="menu-icons">
-                        <i class="edit-icon" onclick="window.location.href='edit.html'">✏️</i>
-                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">🗑️</i>
+                        <i class="edit-icon" onclick="window.location.href='edit.html'">수정</i>
+                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">삭제</i>
                     </td>
                 </tr>
                 <tr>
@@ -222,8 +209,8 @@
                     <td>락</td>
                     <td>3 : 30</td>
                     <td class="menu-icons">
-                        <i class="edit-icon" onclick="window.location.href='edit.html'">✏️</i>
-                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">🗑️</i>
+                        <i class="edit-icon" onclick="window.location.href='edit.html'">수정</i>
+                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">삭제</i>
                     </td>
                 </tr>
                 <tr>
@@ -234,8 +221,8 @@
                     <td>발라드</td>
                     <td>4 : 09</td>
                     <td class="menu-icons">
-                        <i class="edit-icon" onclick="window.location.href='edit.html'">✏️</i>
-                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">🗑️</i>
+                        <i class="edit-icon" onclick="window.location.href='edit.html'">수정</i>
+                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">삭제</i>
                     </td>
                 </tr>
                 <tr>
@@ -246,8 +233,8 @@
                     <td>발라드</td>
                     <td>4 : 39</td>
                     <td class="menu-icons">
-                        <i class="edit-icon" onclick="window.location.href='edit.html'">✏️</i>
-                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">🗑️</i>
+                        <i class="edit-icon" onclick="window.location.href='edit.html'">수정</i>
+                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">삭제</i>
                     </td>
                 </tr>
                 <tr>
@@ -258,8 +245,8 @@
                     <td>포크</td>
                     <td>3 : 24</td>
                     <td class="menu-icons">
-                        <i class="edit-icon" onclick="window.location.href='edit.html'">✏️</i>
-                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">🗑️</i>
+                        <i class="edit-icon" onclick="window.location.href='edit.html'">수정</i>
+                        <i class="delete-icon" onclick="confirm('삭제하시겠습니까?')">삭제</i>
                     </td>
                 </tr>
             </tbody>

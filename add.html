@@ -3,114 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Music Library</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
+    <title>음악 추가</title>
+    <link rel="stylesheet" href="my.css">
+    <script>
+        function validateForm() {
+            const title = document.getElementById('songTitle').value;
+            const artist = document.getElementById('artist').value;
+            const album = document.getElementById('album').value;
+            const genre = document.getElementById('genre').value;
+            const playtime = document.getElementById('playtime').value;
 
-        nav {
-            background-color: #007BFF;
-            padding: 10px;
-            text-align: center;
+            if (!title || !artist || !album || !genre || !playtime) {
+                alert('모든 필수 항목을 입력하세요.');
+                return false;
+            }
+            alert('게시물이 추가됩니다.');
+            return true;
         }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 50px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        .search-bar {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
-
-        .search-bar select, .search-bar input {
-            padding: 8px;
-            font-size: 16px;
-        }
-
-        .search-bar input[type="text"] {
-            flex: 1;
-            margin-left: 10px;
-        }
-
-        .search-bar button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin-left: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table th, table td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        table th {
-            background-color: #007BFF;
-            color: white;
-        }
-
-        .pagination {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .pagination a {
-            color: #007BFF;
-            margin: 0 5px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-    </style>
+    </script>
 </head>
 <body>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">NoStyle</a>
-        <a href="#">Example</a>
-        <a href="#">About</a>
-    </nav>
-
     <div class="container">
-        <h1>My Music Library</h1>
+        <h1>음악 추가</h1>
+        <form onsubmit="return validateForm()">
+            <label for="songTitle">노래 제목:</label>
+            <input type="text" id="songTitle" placeholder="노래 제목 입력">
 
-        <div class="search-bar">
-            <select>
-                <option value="">Select Genre</option>
+            <label for="artist">아티스트:</label>
+            <input type="text" id="artist" placeholder="아티스트 입력">
+
+            <label for="album">앨범:</label>
+            <input type="text" id="album" placeholder="앨범명 입력">
+
+            <label for="genre">장르:</label>
+            <select id="genre">
+                <option value="">선택하세요</option>
                 <option value="댄스">댄스</option>
                 <option value="발라드">발라드</option>
                 <option value="힙합">힙합</option>
@@ -118,113 +45,16 @@
                 <option value="포크">포크</option>
                 <option value="팝송">팝송</option>
             </select>
-            <input type="text" placeholder="Search song">
-            <button onclick="window.location.href='add.html'">추가</button>
-        </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Song Title</th>
-                    <th>Artist</th>
-                    <th>Album</th>
-                    <th>Genre</th>
-                    <th>Play time</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><a href="view.html">Rainy day</a></td>
-                    <td>PATEKO</td>
-                    <td>Rainy day</td>
-                    <td>힙합</td>
-                    <td>3 : 38</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><a href="view.html">How Sweet</a></td>
-                    <td>NewJeans</td>
-                    <td>How Sweet</td>
-                    <td>댄스</td>
-                    <td>3 : 39</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td><a href="view.html">한 페이지가 될 수 있게</a></td>
-                    <td>DAY6</td>
-                    <td>The Book of Us : Gravity</td>
-                    <td>락</td>
-                    <td>3 : 25</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td><a href="view.html">예뻤어</a></td>
-                    <td>DAY6</td>
-                    <td>Every DAY6 February</td>
-                    <td>락</td>
-                    <td>4 : 43</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td><a href="view.html">LOVE DAY</a></td>
-                    <td>양요섭, 정은지</td>
-                    <td>'A CUBE' FOR SEASON # GREEN</td>
-                    <td>발라드</td>
-                    <td>3 : 53</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td><a href="view.html">All For You</a></td>
-                    <td>서인국, 정은지</td>
-                    <td>응답하라 1997 Love Story Part 1</td>
-                    <td>발라드</td>
-                    <td>4 : 08</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td><a href="view.html">신호등</a></td>
-                    <td>이무진</td>
-                    <td>신호등</td>
-                    <td>락</td>
-                    <td>3 : 30</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td><a href="view.html">너의 번호를 누르고</a></td>
-                    <td>#안녕</td>
-                    <td>너의 번호를 누르고</td>
-                    <td>발라드</td>
-                    <td>4 : 09</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td><a href="view.html">Last Dance</a></td>
-                    <td>BIGBANG</td>
-                    <td>MADE</td>
-                    <td>발라드</td>
-                    <td>4 : 39</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td><a href="view.html">후라이의 꿈</a></td>
-                    <td>AKMU</td>
-                    <td>Love Lee</td>
-                    <td>포크</td>
-                    <td>3 : 24</td>
-                </tr>
-            </tbody>
-        </table>
+            <label for="playtime">재생 시간 (분:초):</label>
+            <input type="text" id="playtime" placeholder="예: 3:24">
 
-        <div class="pagination">
-            <a href="#">«</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">»</a>
-        </div>
+            <div class="button-group">
+                <button type="submit">확인</button>
+                <!-- 취소 누르면 index.html로 이동 -->
+                <button type="button" onclick="window.location.href='index.html'">취소</button>
+            </div>
+        </form>
     </div>
-
 </body>
 </html>
