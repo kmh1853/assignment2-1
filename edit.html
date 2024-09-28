@@ -4,29 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>음악 수정</title>
-    <link rel="stylesheet" href="my.css">
-    <script>
-        function validateForm() {
-            if (confirm('게시물을 수정할까요?')) {
-                return true;
-            }
-            return false;
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
         }
-    </script>
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.cancel {
+            background-color: #dc3545;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
         <h1>음악 수정</h1>
-        <form onsubmit="return validateForm()">
+
+        <form onsubmit="return confirm('게시물을 수정할까요?')">
+            <!-- 노래 제목 -->
             <label for="songTitle">노래 제목:</label>
             <input type="text" id="songTitle" value="Rainy day">
 
+            <!-- 아티스트 -->
             <label for="artist">아티스트:</label>
             <input type="text" id="artist" value="PATEKO">
 
+            <!-- 앨범 -->
             <label for="album">앨범:</label>
             <input type="text" id="album" value="Rainy day">
 
+            <!-- 장르 -->
             <label for="genre">장르:</label>
             <select id="genre">
                 <option value="힙합" selected>힙합</option>
@@ -37,14 +71,26 @@
                 <option value="팝송">팝송</option>
             </select>
 
+            <!-- 재생 시간 -->
             <label for="playtime">재생 시간 (분:초):</label>
             <input type="text" id="playtime" value="3:38">
 
+            <!-- 평점 -->
+            <label for="rating">평점 (1~5):</label>
+            <select id="rating">
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5" selected>★★★★★</option>
+            </select>
+
             <div class="button-group">
                 <button type="submit">확인</button>
-                <button type="button" onclick="window.location.href='index.html'">취소</button>
+                <button type="button" class="cancel" onclick="window.location.href='index.html'">취소</button>
             </div>
         </form>
     </div>
+
 </body>
 </html>

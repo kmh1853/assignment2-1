@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>음악 보기</title>
-    <link rel="stylesheet" href="my.css">
+    <title>음악 정보</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.delete {
+            background-color: #dc3545;
+        }
+    </style>
     <script>
         function confirmDelete() {
             if (confirm('게시물을 삭제할까요?')) {
@@ -12,30 +52,25 @@
                 window.location.href = 'index.html';
             }
         }
-
-        function goToEdit() {
-            window.location.href = 'edit.html';
-        }
-
-        function goToList() {
-            window.location.href = 'index.html';
-        }
     </script>
 </head>
 <body>
     <div class="container">
-        <h1>음악 상세 보기</h1>
-        <p>노래 제목: Rainy day</p>
-        <p>아티스트: PATEKO</p>
-        <p>앨범: Rainy day</p>
-        <p>장르: 힙합</p>
-        <p>재생 시간: 3:38</p>
+        <h1>음악 정보</h1>
+
+        <p><strong>노래 제목:</strong> Rainy day</p>
+        <p><strong>아티스트:</strong> PATEKO</p>
+        <p><strong>앨범:</strong> Rainy day</p>
+        <p><strong>장르:</strong> 힙합</p>
+        <p><strong>재생 시간:</strong> 3:38</p>
+        <p><strong>평점:</strong> ★★★★★</p>
 
         <div class="button-group">
-            <button onclick="goToEdit()">수정</button>
-            <button onclick="confirmDelete()">삭제</button>
-            <button onclick="goToList()">목록</button>
+            <button onclick="window.location.href='edit.html'">수정</button>
+            <button class="delete" onclick="confirmDelete()">삭제</button>
+            <button onclick="window.location.href='index.html'">목록</button>
         </div>
     </div>
+
 </body>
 </html>
