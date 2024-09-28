@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음악 수정</title>
+    <link rel="stylesheet" href="my.css">
+    <script>
+        function validateForm() {
+            if (confirm('게시물을 수정할까요?')) {
+                return true;
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>음악 수정</h1>
+        <form onsubmit="return validateForm()">
+            <label for="songTitle">노래 제목:</label>
+            <input type="text" id="songTitle" value="Rainy day">
+
+            <label for="artist">아티스트:</label>
+            <input type="text" id="artist" value="PATEKO">
+
+            <label for="album">앨범:</label>
+            <input type="text" id="album" value="Rainy day">
+
+            <label for="genre">장르:</label>
+            <select id="genre">
+                <option value="힙합" selected>힙합</option>
+                <option value="댄스">댄스</option>
+                <option value="발라드">발라드</option>
+                <option value="락">락</option>
+                <option value="포크">포크</option>
+                <option value="팝송">팝송</option>
+            </select>
+
+            <label for="playtime">재생 시간 (분:초):</label>
+            <input type="text" id="playtime" value="3:38">
+
+            <div class="button-group">
+                <button type="submit">확인</button>
+                <button type="button" onclick="window.location.href='index.html'">취소</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

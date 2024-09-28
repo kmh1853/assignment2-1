@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음악 보기</title>
+    <link rel="stylesheet" href="my.css">
+    <script>
+        function confirmDelete() {
+            if (confirm('게시물을 삭제할까요?')) {
+                alert('게시물이 삭제되었습니다.');
+                window.location.href = 'index.html';
+            }
+        }
+
+        function goToEdit() {
+            window.location.href = 'edit.html';
+        }
+
+        function goToList() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>음악 상세 보기</h1>
+        <p>노래 제목: Rainy day</p>
+        <p>아티스트: PATEKO</p>
+        <p>앨범: Rainy day</p>
+        <p>장르: 힙합</p>
+        <p>재생 시간: 3:38</p>
+
+        <div class="button-group">
+            <button onclick="goToEdit()">수정</button>
+            <button onclick="confirmDelete()">삭제</button>
+            <button onclick="goToList()">목록</button>
+        </div>
+    </div>
+</body>
+</html>
